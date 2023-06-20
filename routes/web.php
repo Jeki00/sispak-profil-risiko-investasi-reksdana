@@ -20,3 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/aturan', [App\Http\Controllers\AturanController::class, 'index'])->name('aturan');
+Route::get('/aturan/hapus/{id}', [App\Http\Controllers\AturanController::class, 'destroy'])->name('aturan');

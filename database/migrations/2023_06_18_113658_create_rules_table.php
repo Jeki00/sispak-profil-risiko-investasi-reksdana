@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('rules', function (Blueprint $table) {
-            $table->string('kode_rule')->primary();
+            $table->id('kode_rule');
             $table->string('profil');
             $table->string('jawaban_1');
             $table->foreign('jawaban_1')->references('kode_jawaban')->on('jawaban');
@@ -22,6 +22,7 @@ return new class extends Migration
             $table->foreign('jawaban_3')->references('kode_jawaban')->on('jawaban');
             $table->string('jawaban_4');
             $table->foreign('jawaban_4')->references('kode_jawaban')->on('jawaban');
+            $table->string('jenis_reksadana')->nullable();
             $table->timestamps();
         });
     }

@@ -10,4 +10,9 @@ class Jawaban extends Model
     use HasFactory;
 
     protected $table = 'jawaban';
+
+    public function rule(): HasMany
+    {
+        return $this->hasMany(Rule::class);
+    }
 }

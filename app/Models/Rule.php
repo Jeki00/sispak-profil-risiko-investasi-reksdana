@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Rule extends Model
 {
     use HasFactory;
+
+    public function jawaban(): BelongsTo
+    {
+        return $this->belongsTo(Jawaban::class);
+    }
 }

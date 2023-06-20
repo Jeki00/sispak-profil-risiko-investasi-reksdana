@@ -38,7 +38,7 @@
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">
+                            <a class="nav-link" href="{{ url('/aturan') }}">
                                 aturan
                             </a> 
                             
