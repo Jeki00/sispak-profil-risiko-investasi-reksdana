@@ -11,16 +11,21 @@ class PertanyaanController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+
+
+    public function index(Request $request)
     {
-        return view('pertanyaan');
+        $nama = $request->query('nama');
+
+        return view('pertanyaan',[
+            'nama'=>$nama
+        ]);
     }
 
     public function consult(Request $request)
     {
-        $nama = $request->query('nama');
+        $nama = $request['nama'];
 
-        dd($nama);
         $jawaban1 = $request['jawaban1'];
         $jawaban2 = $request['jawaban2'];
         $jawaban3 = $request['jawaban3'];

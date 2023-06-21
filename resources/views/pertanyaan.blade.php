@@ -5,6 +5,7 @@
 @section('content')
 
     <form action="/konsultasi" method="POST" class="border roundex p-5 m-5">
+        <input type="hidden" name="nama" value='{{$nama}}' id="">
         <h3> Jawablah beberapa pertanyaan berikut</h3>
         @csrf
         <div class="border rounded p-3 m-2">

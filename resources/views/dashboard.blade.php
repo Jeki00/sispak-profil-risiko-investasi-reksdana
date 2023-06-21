@@ -21,7 +21,6 @@
                 </div>
                 <form action="/konsultasi" id="namaForm">
                     <div class="modal-body">
-                        @csrf
                         <label for="nama" class="form-label">Masukkan Nama</label>
                         <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama" required>
                         <button type="submit" class="btn btn-primary">mulai</button>
@@ -87,20 +86,3 @@
     </div>
 @endsection
 
-
-<script>
-var form = document.getElementById("namaForm");
-
-form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Mencegah form untuk melakukan submit
-
-    var namaPengisi = document.getElementById("nama").value;
-
-    // Simpan nilai dalam localStorage
-    localStorage.setItem("namaPengisi", namaPengisi);
-
-    // Tambahkan kode lainnya setelah menyimpan data
-    // Misalnya, tampilkan pesan sukses atau alihkan halaman
-    window.location.href = "/konsultasi";
-});
-</script>
