@@ -14,22 +14,26 @@
                         </div>
                     @endif
                     
-                    <table>
+                    <table class="table ">
                         @foreach ($rules as $rule)
                         <tr>
+                            <td> {{$rule->profil}}</td>
                             <td>
-                                <ul>
-                                    <li> {{$rule->profil}}</li>
+                                
                                     <ul>
                                         <li>{{$rule->jawaban_1 }}</li>
                                         <li>{{$rule->jawaban_2 }}</li>
                                         <li>{{$rule->jawaban_3 }}</li>
                                         <li>{{$rule->jawaban_4 }}</li>
-                                    </ul>
+                                    
                                 </ul>
                             </td>
                             <td>
-                                <a href='/aturan/hapus/{{$rule->kode_rule}}' class="btn btn-sm btn-danger">Hapus</a>
+                                <form action="/aturan/hapus/{{$rule->id}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-sm btn-danger">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach
@@ -38,10 +42,12 @@
                     
                 </div>
                 <div class="card-footer">
-                    <a href="/aturan/tambah" class="btn btn-primary">tambah</a>
+                    <a href="/aturan/tambah" class="btn btn-primary" >tambah</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 @endsection

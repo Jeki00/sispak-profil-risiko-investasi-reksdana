@@ -32,7 +32,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">
+                            <a class="nav-link" href="{{ url('/konsultasi') }}">
                                 konsultasi profil risiko 
                             </a>
 

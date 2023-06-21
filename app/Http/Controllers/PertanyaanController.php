@@ -3,24 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Http\Controllers\AturanController;
 use App\Models\Rule;
 use Illuminate\Support\Facades\DB;
 
-class AturanController extends Controller
+class PertanyaanController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     public function index()
     {
-        $rule = DB::table('rules as r')
+        return view('pertanyaan');
+    }
+
+    public function consult(Request $request)
+    {
+        $nama = $request->query('nama');
+
+        dd($nama);
+        $jawaban1 = $request['jawaban1'];
+        $jawaban2 = $request['jawaban2'];
+        $jawaban3 = $request['jawaban3'];
+        $jawaban4 = $request['jawaban4'];
+
+
+        $profil = DB::table('rules as r')
+        ->where('jawaban_2', $jawaban2)
+        ->where('jawaban_2', $jawaban2)
+        ->where('jawaban_3', $jawaban3)
+        ->where('jawaban_4', $jawaban4)
         ->join('jawaban as j1', 'r.jawaban_1', '=', 'j1.kode_jawaban')
         ->join('jawaban as j2', 'r.jawaban_2', '=', 'j2.kode_jawaban')
         ->join('jawaban as j3', 'r.jawaban_3', '=', 'j3.kode_jawaban')
@@ -28,9 +39,16 @@ class AturanController extends Controller
         ->select('r.id','r.profil', 'j1.jawaban as jawaban_1', 'j2.jawaban as jawaban_2', 'j3.jawaban as jawaban_3', 'j4.jawaban as jawaban_4')
         ->get();
 
-        return view('aturan',[
-            'rules'=> $rule,
+        // dd(count($profil));
+
+
+        return view('hasil',[
+            'profil'=>$profil,
+            'ada'=>count($profil),
+            'nama'=>$nama
         ]);
+        
+        
     }
 
     /**
@@ -38,7 +56,7 @@ class AturanController extends Controller
      */
     public function create()
     {
-        return view('tambahAturan');
+        //
     }
 
     /**
@@ -46,21 +64,7 @@ class AturanController extends Controller
      */
     public function store(Request $request)
     {
-        $profil = $request['profil'];
-        $jawaban1 = $request['jawaban1'];
-        $jawaban2 = $request['jawaban2'];
-        $jawaban3 = $request['jawaban3'];
-        $jawaban4 = $request['jawaban4'];
-
-        Rule::create([
-            'profil'=>$profil,
-            'jawaban_1'=>$jawaban1,
-            'jawaban_2'=>$jawaban2,
-            'jawaban_3'=>$jawaban3,
-            'jawaban_4'=>$jawaban4,
-        ]);
-
-        return redirect('/aturan');
+        //
     }
 
     /**
@@ -92,7 +96,6 @@ class AturanController extends Controller
      */
     public function destroy(string $id)
     {
-        Rule::find($id)->delete();
-        return redirect('/aturan');
+        //
     }
 }

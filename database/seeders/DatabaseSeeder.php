@@ -157,6 +157,28 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('rules')->insert([
+            'profil'=>'sangat konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-A',
+            'jawaban_4'=>'P4-B',
+        ]);
+        DB::table('rules')->insert([
+            'profil'=>'sangat konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-A',
+            'jawaban_4'=>'P4-C',
+        ]);
+        DB::table('rules')->insert([
+            'profil'=>'sangat konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-A',
+            'jawaban_4'=>'P4-D',
+        ]);
+
+        DB::table('rules')->insert([
             'profil'=>'konservatif',
             'jawaban_1'=>'P1-B',
             'jawaban_2'=>'P2-B',
@@ -171,6 +193,29 @@ class DatabaseSeeder extends Seeder
             'jawaban_3'=>'P3-C',
             'jawaban_4'=>'P4-C',
         ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'agresif',
+            'jawaban_1'=>'P1-D',
+            'jawaban_2'=>'P2-D',
+            'jawaban_3'=>'P3-D',
+            'jawaban_4'=>'P4-A',
+        ]);
+        DB::table('rules')->insert([
+            'profil'=>'agresif',
+            'jawaban_1'=>'P1-D',
+            'jawaban_2'=>'P2-D',
+            'jawaban_3'=>'P3-D',
+            'jawaban_4'=>'P4-B',
+        ]);
+        DB::table('rules')->insert([
+            'profil'=>'agresif',
+            'jawaban_1'=>'P1-D',
+            'jawaban_2'=>'P2-D',
+            'jawaban_3'=>'P3-D',
+            'jawaban_4'=>'P4-C',
+        ]);
+
         DB::table('rules')->insert([
             'profil'=>'agresif',
             'jawaban_1'=>'P1-D',

@@ -9,6 +9,8 @@ class Rule extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['kode_rule'];
+    
     public function jawaban(): BelongsTo
     {
         return $this->belongsTo(Jawaban::class);

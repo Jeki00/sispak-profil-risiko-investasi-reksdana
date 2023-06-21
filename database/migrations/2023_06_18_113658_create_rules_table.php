@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('rules', function (Blueprint $table) {
-            $table->id('kode_rule');
+            $table->id();
             $table->string('profil');
             $table->string('jawaban_1');
             $table->foreign('jawaban_1')->references('kode_jawaban')->on('jawaban');
