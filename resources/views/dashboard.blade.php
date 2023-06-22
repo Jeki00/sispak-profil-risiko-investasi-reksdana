@@ -23,7 +23,7 @@
                     <div class="modal-body">
                         <label for="nama" class="form-label">Masukkan Nama</label>
                         <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama" required>
-                        <button type="submit" class="btn btn-primary">mulai</button>
+                        <button type="submit" class="btn btn-primary m-2">mulai</button>
                     </div>
                 </form>
             </div>

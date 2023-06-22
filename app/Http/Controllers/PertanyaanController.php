@@ -41,7 +41,8 @@ class PertanyaanController extends Controller
         ->join('jawaban as j2', 'r.jawaban_2', '=', 'j2.kode_jawaban')
         ->join('jawaban as j3', 'r.jawaban_3', '=', 'j3.kode_jawaban')
         ->join('jawaban as j4', 'r.jawaban_4', '=', 'j4.kode_jawaban')
-        ->select('r.id','r.profil', 'j1.jawaban as jawaban_1', 'j2.jawaban as jawaban_2', 'j3.jawaban as jawaban_3', 'j4.jawaban as jawaban_4')
+        ->join('reksadanas as rd', 'r.jenis_reksadana', '=', 'rd.id')
+        ->select('r.id','r.profil', 'j1.jawaban as jawaban_1', 'j2.jawaban as jawaban_2', 'j3.jawaban as jawaban_3', 'j4.jawaban as jawaban_4', 'rd.nama_reksadana', 'rd.deskripsi')
         ->get();
 
         // dd(count($profil));

@@ -5,7 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Aturan') }}</div>
+                <div class="card-header">
+                    {{ __('Aturan') }}
+                    <div class="float-end">
+                        <a href="/aturan/tambah" class="btn btn-primary" >tambah</a>
+                    </div>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -40,9 +45,6 @@
                     </table>
 
                     
-                </div>
-                <div class="card-footer">
-                    <a href="/aturan/tambah" class="btn btn-primary" >tambah</a>
                 </div>
             </div>
         </div>

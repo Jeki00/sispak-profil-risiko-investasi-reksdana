@@ -5,7 +5,7 @@
 
 <div class="row justify-content-center m-5">
     <div class="col-md-8">
-        <div class="card" style="height: 75vh">
+        <div class="card" >
             <div class="card-header">
                 <h4>Hasil</h4>
             </div>
@@ -34,8 +34,9 @@
                     <li>
                         {{$item->jawaban_4}}
                     </li>
-                    
                 </ul>
+                <h5>Reksadana yang cocok adalah <strong> {{$item->nama_reksadana}} </strong></h5>
+                <p>{{$item->deskripsi}}</p>
                 @endforeach
             </div>
             @endif

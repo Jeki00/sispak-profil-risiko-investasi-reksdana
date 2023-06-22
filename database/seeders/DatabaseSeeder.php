@@ -101,25 +101,25 @@ class DatabaseSeeder extends Seeder
         // pertanyaan 3
         DB::table('jawaban')->insert([
             'kode_jawaban' => 'P3-A',
-            'jawaban'=>'porsi dana kurang dari 25 % ',
+            'jawaban'=>'porsi dana kurang dari 10 % ',
             'pertanyaan'=>'P3',
         ]);
 
         DB::table('jawaban')->insert([
             'kode_jawaban' => 'P3-B',
-            'jawaban'=>'porsi dana antara 25-50 %',
+            'jawaban'=>'porsi dana antara 10-20 %',
             'pertanyaan'=>'P3',
         ]);
 
         DB::table('jawaban')->insert([
             'kode_jawaban' => 'P3-C',
-            'jawaban'=>'porsi dana antara 50-75%',
+            'jawaban'=>'porsi dana antara 20-30%',
             'pertanyaan'=>'P3',
         ]);
         
         DB::table('jawaban')->insert([
             'kode_jawaban' => 'P3-D',
-            'jawaban'=>'porsi dana lebih dari 75%',
+            'jawaban'=>'porsi dana antara 30-40%',
             'pertanyaan'=>'P3',
         ]);
 
@@ -148,12 +148,34 @@ class DatabaseSeeder extends Seeder
             'pertanyaan'=>'P4',
         ]);
 
+        DB::table('reksadanas')->insert([
+            'nama_reksadana'=>'reksadana pasar uang',
+            'deskripsi'=>'
+            Reksadana pasar uang adalah jenis investasi di mana dana dari berbagai investor dikumpulkan dan dikelola oleh manajer investasi profesional. Dana tersebut diinvestasikan pada instrumen pasar uang yang cenderung memiliki risiko rendah, seperti deposito berjangka, surat berharga komersial, sertifikat deposito, dan instrumen pasar uang lainnya. Reksadana pasar uang cocok untuk investor dengan tujuan investasi jangka pendek, mencari instrumen investasi yang aman dan likuid. Reksadana pasar uang memberikan stabilitas dan pertumbuhan modal yang cukup baik dalam jangka pendek, namun tetap perlu memperhatikan risiko investasi yang ada.',
+        ]);
+
+        DB::table('reksadanas')->insert([
+            'nama_reksadana'=>'reksadana pendapatan tetap',
+            'deskripsi'=>'Reksadana pendapatan tetap adalah jenis reksadana di mana dana dari investor dikumpulkan dan dikelola oleh manajer investasi profesional. Dana tersebut diinvestasikan pada instrumen pendapatan tetap, seperti obligasi pemerintah, obligasi perusahaan, dan surat utang lainnya. Reksadana pendapatan tetap bertujuan untuk memberikan pendapatan tetap kepada investor melalui bunga atau kupon yang dihasilkan dari instrumen pendapatan tetap tersebut. Reksadana ini cocok untuk investor yang mencari pendapatan rutin dan lebih stabil daripada reksadana saham, dengan risiko yang relatif lebih rendah. Meskipun demikian, perlu diperhatikan bahwa nilai investasi reksadana pendapatan tetap dapat berfluktuasi seiring dengan perubahan suku bunga dan risiko kredit penerbit instrumen pendapatan tetap.',
+        ]);
+
+        DB::table('reksadanas')->insert([
+            'nama_reksadana'=>'reksadana campuran',
+            'deskripsi'=>'Reksadana campuran adalah jenis reksadana yang memiliki portofolio investasi yang terdiri dari kombinasi instrumen saham dan instrumen pendapatan tetap. Tujuan dari reksadana campuran adalah mencapai keseimbangan antara pertumbuhan modal jangka panjang yang lebih tinggi yang biasanya terkait dengan saham, dan pendapatan yang stabil yang biasanya berasal dari instrumen pendapatan tetap. Dengan adanya kombinasi ini, reksadana campuran cocok untuk investor yang mencari pertumbuhan modal jangka panjang namun juga ingin menjaga risiko dengan memiliki alokasi dana pada instrumen yang lebih stabil.',
+        ]);
+
+        DB::table('reksadanas')->insert([
+            'nama_reksadana'=>'reksadana saham',
+            'deskripsi'=>'Reksadana saham adalah jenis reksadana yang menginvestasikan dana dari para investor pada saham-saham perusahaan yang terdaftar di bursa efek. Manajer investasi yang profesional akan mengelola portofolio investasi dengan tujuan mencapai pertumbuhan modal jangka panjang. Reksadana saham cocok untuk investor yang memiliki toleransi risiko yang lebih tinggi dan mencari potensi pertumbuhan modal yang lebih tinggi. Dalam reksadana saham, dana investor dialokasikan pada berbagai saham dari berbagai sektor dan perusahaan yang berbeda. Dengan demikian, investor dapat mendapatkan diversifikasi yang lebih baik daripada membeli saham individual secara langsung.',
+        ]);
+
         DB::table('rules')->insert([
             'profil'=>'sangat konservatif',
             'jawaban_1'=>'P1-A',
             'jawaban_2'=>'P2-A',
             'jawaban_3'=>'P3-A',
             'jawaban_4'=>'P4-A',
+            'jenis_reksadana'=>1
         ]);
 
         DB::table('rules')->insert([
@@ -162,6 +184,7 @@ class DatabaseSeeder extends Seeder
             'jawaban_2'=>'P2-A',
             'jawaban_3'=>'P3-A',
             'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>1
         ]);
         DB::table('rules')->insert([
             'profil'=>'sangat konservatif',
@@ -169,6 +192,7 @@ class DatabaseSeeder extends Seeder
             'jawaban_2'=>'P2-A',
             'jawaban_3'=>'P3-A',
             'jawaban_4'=>'P4-C',
+            'jenis_reksadana'=>1
         ]);
         DB::table('rules')->insert([
             'profil'=>'sangat konservatif',
@@ -176,6 +200,215 @@ class DatabaseSeeder extends Seeder
             'jawaban_2'=>'P2-A',
             'jawaban_3'=>'P3-A',
             'jawaban_4'=>'P4-D',
+            'jenis_reksadana'=>1
+        ]);
+        DB::table('rules')->insert([
+            'profil'=>'sangat konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-A',
+            'jawaban_4'=>'P4-A',
+            'jenis_reksadana'=>1
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-B',
+            'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-B',
+            'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-B',
+            'jawaban_4'=>'P4-C',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-B',
+            'jawaban_4'=>'P4-D',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-D',
+            'jawaban_4'=>'P4-A',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'moderat',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-D',
+            'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>3
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'moderat',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-D',
+            'jawaban_4'=>'P4-C',
+            'jenis_reksadana'=>3
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'moderat',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-D',
+            'jawaban_4'=>'P4-D',
+            'jenis_reksadana'=>3
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'sangat konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-A',
+            'jawaban_4'=>'P4-A',
+            'jenis_reksadana'=>1
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-A',
+            'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-A',
+            'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-A',
+            'jawaban_4'=>'P4-C',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-A',
+            'jawaban_4'=>'P4-D',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-B',
+            'jawaban_4'=>'P4-A',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-B',
+            'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-B',
+            'jawaban_4'=>'P4-C',
+            'jenis_reksadana'=>2
+        ]);
+
+        
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-B',
+            'jawaban_4'=>'P4-D',
+            'jenis_reksadana'=>2
+        ]);
+
+        
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-C',
+            'jawaban_4'=>'P4-A',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'konservatif',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-C',
+            'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>2
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'moderat',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-C',
+            'jawaban_4'=>'P4-C',
+            'jenis_reksadana'=>3
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'moderat',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-C',
+            'jawaban_4'=>'P4-D',
+            'jenis_reksadana'=>3
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'moderat',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-B',
+            'jawaban_3'=>'P3-D',
+            'jawaban_4'=>'P4-A',
+            'jenis_reksadana'=>3
         ]);
 
         DB::table('rules')->insert([
@@ -184,7 +417,37 @@ class DatabaseSeeder extends Seeder
             'jawaban_2'=>'P2-B',
             'jawaban_3'=>'P3-B',
             'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>2
         ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'moderat',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-C',
+            'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>3
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'moderat',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-C',
+            'jawaban_4'=>'P4-C',
+            'jenis_reksadana'=>3
+        ]);
+
+        DB::table('rules')->insert([
+            'profil'=>'moderat',
+            'jawaban_1'=>'P1-A',
+            'jawaban_2'=>'P2-A',
+            'jawaban_3'=>'P3-C',
+            'jawaban_4'=>'P4-D',
+            'jenis_reksadana'=>3
+        ]);
+
+        
 
         DB::table('rules')->insert([
             'profil'=>'moderat',
@@ -192,6 +455,7 @@ class DatabaseSeeder extends Seeder
             'jawaban_2'=>'P2-C',
             'jawaban_3'=>'P3-C',
             'jawaban_4'=>'P4-C',
+            'jenis_reksadana'=>3
         ]);
 
         DB::table('rules')->insert([
@@ -200,6 +464,7 @@ class DatabaseSeeder extends Seeder
             'jawaban_2'=>'P2-D',
             'jawaban_3'=>'P3-D',
             'jawaban_4'=>'P4-A',
+            'jenis_reksadana'=>4
         ]);
         DB::table('rules')->insert([
             'profil'=>'agresif',
@@ -207,6 +472,7 @@ class DatabaseSeeder extends Seeder
             'jawaban_2'=>'P2-D',
             'jawaban_3'=>'P3-D',
             'jawaban_4'=>'P4-B',
+            'jenis_reksadana'=>4
         ]);
         DB::table('rules')->insert([
             'profil'=>'agresif',
@@ -214,6 +480,7 @@ class DatabaseSeeder extends Seeder
             'jawaban_2'=>'P2-D',
             'jawaban_3'=>'P3-D',
             'jawaban_4'=>'P4-C',
+            'jenis_reksadana'=>4
         ]);
 
         DB::table('rules')->insert([
@@ -222,6 +489,7 @@ class DatabaseSeeder extends Seeder
             'jawaban_2'=>'P2-D',
             'jawaban_3'=>'P3-D',
             'jawaban_4'=>'P4-D',
+            'jenis_reksadana'=>4
         ]);
 
 

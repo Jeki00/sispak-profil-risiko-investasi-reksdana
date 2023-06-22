@@ -32,9 +32,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/konsultasi') }}">
-                                konsultasi profil risiko 
-                            </a>
 
                         </li>
                         <li class="nav-item">
@@ -67,6 +64,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <p class="dropdown-item">{{Auth::user()->id}}</p>
+                                    <p class="dropdown-item">{{Auth::user()->email}}</p>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

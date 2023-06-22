@@ -34,13 +34,13 @@
         <div class="border rounded p-3 m-2">
             <label for="inputJawaban3" class="form-label">Porsi dana untuk investasi?</label><br>
             <input type="radio" name="jawaban3" id="P3-A" value="P3-A">
-            <label for="P3-A">kurang dari 25 %</label><br>
+            <label for="P3-A">kurang dari 10 %</label><br>
             <input type="radio" name="jawaban3" id="P3-B" value="P3-B">
-            <label for="P3-B">25-50 %</label><br>
+            <label for="P3-B">10-20 %</label><br>
             <input type="radio" name="jawaban3" id="P3-C" value="P3-C">
-            <label for="P3-C">50-75 % tahun</label><br>
+            <label for="P3-C">20-30 % tahun</label><br>
             <input type="radio" name="jawaban3" id="P3-D" value="P3-D">
-            <label for="P3-D">lebih dari 75%</label>
+            <label for="P3-D">20-40 %</label>
         </div>
         
         <div class="border rounded p-3 m-2">

@@ -22,7 +22,8 @@ return new class extends Migration
             $table->foreign('jawaban_3')->references('kode_jawaban')->on('jawaban');
             $table->string('jawaban_4');
             $table->foreign('jawaban_4')->references('kode_jawaban')->on('jawaban');
-            $table->string('jenis_reksadana')->nullable();
+            $table->unsignedBigInteger('jenis_reksadana')->nullable();
+            $table->foreign('jenis_reksadana')->references('id')->on('reksadanas');
             $table->timestamps();
         });
     }
