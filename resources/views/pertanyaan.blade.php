@@ -38,7 +38,7 @@
             <input type="radio" name="jawaban3" id="P3-B" value="P3-B">
             <label for="P3-B">10-20 %</label><br>
             <input type="radio" name="jawaban3" id="P3-C" value="P3-C">
-            <label for="P3-C">20-30 % tahun</label><br>
+            <label for="P3-C">20-30 %</label><br>
             <input type="radio" name="jawaban3" id="P3-D" value="P3-D">
             <label for="P3-D">20-40 %</label>
         </div>
